@@ -1,0 +1,9 @@
+<resources>
+    <color name="bg">#0B0F14</color>
+    <color name="card">#151B22</color>
+    <color name="text">#F4F7FA</color>
+    <color name="muted">#9AA6B2</color>
+    <color name="accent">#63D7FF</color>
+    <color name="good">#66E3A4</color>
+    <color name="warn">#FFD166</color>
+</resources>
