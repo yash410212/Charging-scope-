@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/bg" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="18dp">
+        <TextView android:text="ChargeScope" android:textColor="@color/text"
+            android:textSize="28sp" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/subtitle" android:text="Charging diagnostic • live"
+            android:textColor="@color/muted" android:textSize="14sp" android:layout_marginBottom="18dp"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <include layout="@layout/card_power"/>
+        </LinearLayout>
+
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+            <TextView android:id="@+id/voltage" android:text="Voltage\n— V" android:textColor="@color/text" android:textSize="18sp"
+                android:gravity="center" android:background="@drawable/card_bg" android:padding="16dp"
+                android:layout_width="0dp" android:layout_height="90dp" android:layout_weight="1"/>
+            <TextView android:id="@+id/current" android:text="Current\n— mA" android:textColor="@color/text" android:textSize="18sp"
+                android:gravity="center" android:background="@drawable/card_bg" android:padding="16dp"
+                android:layout_marginStart="10dp" android:layout_width="0dp" android:layout_height="90dp" android:layout_weight="1"/>
+        </LinearLayout>
+
+        <TextView android:id="@+id/battery" android:text="Battery —%" android:textColor="@color/text" android:textSize="17sp"
+            android:layout_marginTop="16dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/temp" android:text="Temperature — °C" android:textColor="@color/muted" android:textSize="14sp"
+            android:layout_marginTop="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+
+        <TextView android:text="Voltage graph" android:textColor="@color/text" android:textSize="19sp" android:textStyle="bold"
+            android:layout_marginTop="20dp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <com.scopespark.chargescope.GraphView android:id="@+id/graph" android:layout_width="match_parent" android:layout_height="190dp"
+            android:layout_marginTop="8dp" android:background="@drawable/card_bg"/>
+
+        <TextView android:id="@+id/diagnostic" android:text="Diagnostic: waiting for charger data…"
+            android:textColor="@color/good" android:textSize="16sp" android:padding="16dp"
+            android:background="@drawable/card_bg" android:layout_marginTop="16dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+        <TextView android:text="Note: exact wattage depends on what the Tecno/Android firmware exposes."
+            android:textColor="@color/muted" android:textSize="12sp" android:layout_marginTop="12dp"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+</ScrollView>
