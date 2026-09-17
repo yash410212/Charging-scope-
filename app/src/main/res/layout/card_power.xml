@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/power" android:text="— W" android:textColor="@color/text" android:textSize="42sp" android:textStyle="bold"
+    android:gravity="center" android:background="@drawable/card_bg" android:padding="18dp"
+    android:layout_width="match_parent" android:layout_height="125dp"/>
